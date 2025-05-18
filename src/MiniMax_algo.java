@@ -75,7 +75,7 @@ public class MiniMax_algo {
 
             ArrayList<int[]> allPossibleMoves = dummyBoard.generateMoves();
 
-            if(allPossibleMoves.size() == 0) {
+            if(allPossibleMoves.isEmpty()) {
                 Object[] x = {evaluateBoardForWhite(dummyBoard, !max), null, null};
                 return x;
             }
@@ -186,7 +186,6 @@ public class MiniMax_algo {
                 }
                 evaluateDirectionsAfterOnePass(evaluations,forBlack,playersTurn);
             }
-            // From top-left to bottom-right diagonally
             for (int k = 1-boardMatrix.length; k < boardMatrix.length; k++) {
                 int iStart = Math.max(0, k);
                 int iEnd = Math.min(boardMatrix.length + k - 1, boardMatrix.length-1);
