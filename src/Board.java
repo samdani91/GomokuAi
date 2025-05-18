@@ -4,7 +4,7 @@ import java.util.ArrayList;
 public class Board {
 
 	private BoardGUI gui;
-	private int[][] boardMatrix;
+	private final int[][] boardMatrix;
 
 	public Board(int sideLength, int boardSize) {
 		gui = new BoardGUI(sideLength, boardSize);
@@ -15,9 +15,7 @@ public class Board {
 		int[][] matrixToCopy = board.getBoardMatrix();
 		boardMatrix = new int[matrixToCopy.length][matrixToCopy.length];
 		for(int i = 0; i < matrixToCopy.length; i++) {
-			for(int j = 0; j < matrixToCopy.length; j++) {
-				boardMatrix[i][j] = matrixToCopy[i][j];
-			}
+            System.arraycopy(matrixToCopy[i], 0, boardMatrix[i], 0, matrixToCopy.length);
 		}
 	}
 

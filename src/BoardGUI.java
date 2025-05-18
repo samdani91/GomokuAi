@@ -13,14 +13,14 @@ import javax.swing.JPanel;
 
 public class BoardGUI extends JPanel {
 
-	private Graphics2D g2D;
-	private BufferedImage image;
+	private final Graphics2D g2D;
+	private final BufferedImage image;
 	private boolean isAIThinking = false;
 
 	private static final long serialVersionUID = 1L;
 
-	private int sideLength;
-	private int boardSize;
+	private final int sideLength;
+	private final int boardSize;
 	private final int cellLength;
 
 	public BoardGUI(int sideLength, int boardSize) {
