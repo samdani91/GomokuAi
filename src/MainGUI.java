@@ -38,8 +38,8 @@ public class MainGUI extends JFrame {
 		difficultyPanel.setBorder(BorderFactory.createTitledBorder("Select Difficulty"));
 		difficultyPanel.setAlignmentX(Component.CENTER_ALIGNMENT);
 
-		JRadioButton rbNormal = new JRadioButton("Normal (Faster)");
-		rbHard = new JRadioButton("Hard (Slower)");
+		JRadioButton rbNormal = new JRadioButton("Normal");
+		rbHard = new JRadioButton("Hard");
 		rbNormal.setSelected(true);
 
 		ButtonGroup bgDifficulty = new ButtonGroup();
