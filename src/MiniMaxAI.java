@@ -1,12 +1,12 @@
 import java.util.ArrayList;
 
-public class MiniMax_algo {
+public class MiniMaxAI {
 
         public static int evaluationCount = 0;
-        private Board board;
+        private final Board board;
         private static final int WIN_SCORE = 100_000_000;
 
-        public MiniMax_algo(Board board) {
+        public MiniMaxAI(Board board) {
             this.board = board;
         }
 
@@ -108,8 +108,8 @@ public class MiniMax_algo {
             }
             else {
                 bestMove[0] = 100_000_000.0;
-                bestMove[1] = allPossibleMoves.get(0)[0];
-                bestMove[2] = allPossibleMoves.get(0)[1];
+                bestMove[1] = allPossibleMoves.getFirst()[0];
+                bestMove[2] = allPossibleMoves.getFirst()[1];
 
 
                 for(int[] move : allPossibleMoves) {

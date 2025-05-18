@@ -8,12 +8,12 @@ public class Game {
 	private boolean gameFinished = false;
 	private int minimaxDepth = 3;
 	private boolean aiStarts = true;
-	private final MiniMax_algo ai;
+	private final MiniMaxAI miniMaxAI;
 	private int winner;
 
 	public Game(Board board) {
 		this.board = board;
-		ai = new MiniMax_algo(board);
+		miniMaxAI = new MiniMaxAI(board);
 		
 		winner = 0;
 	}
@@ -80,7 +80,7 @@ public class Game {
 				return;
 			}
 
-			int[] aiMove = ai.calculateNextMove(minimaxDepth);
+			int[] aiMove = miniMaxAI.calculateNextMove(minimaxDepth);
 
 			if(aiMove == null) {
 				System.out.println("No possible moves left. Game Over.");
@@ -91,7 +91,7 @@ public class Game {
 
 			playMove(aiMove[1], aiMove[0], false);
 
-			System.out.println("Black: " + MiniMax_algo.getScore(board,true,true) + " White: " + MiniMax_algo.getScore(board,false,true));
+			System.out.println("Black: " + MiniMaxAI.getScore(board,true,true) + " White: " + MiniMaxAI.getScore(board,false,true));
 
 			winner = checkWinner();
 
@@ -121,8 +121,8 @@ public class Game {
 
 
 	private int checkWinner() {
-		if(MiniMax_algo.getScore(board, true, false) >= MiniMax_algo.getWinScore()) return 2;
-		if(MiniMax_algo.getScore(board, false, true) >= MiniMax_algo.getWinScore()) return 1;
+		if(MiniMaxAI.getScore(board, true, false) >= MiniMaxAI.getWinScore()) return 2;
+		if(MiniMaxAI.getScore(board, false, true) >= MiniMaxAI.getWinScore()) return 1;
 		return 0;
 	}
 	private boolean playMove(int posX, int posY, boolean black) {
