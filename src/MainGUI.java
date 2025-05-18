@@ -1,6 +1,5 @@
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
-import javax.swing.border.TitledBorder;
 import java.awt.*;
 import java.awt.event.ActionListener;
 import java.io.Serial;
@@ -47,7 +46,7 @@ public class MainGUI extends JFrame {
 
 		difficultyPanel.add(rbNormal);
 		difficultyPanel.add(rbHard);
-		difficultyPanel.setMaximumSize(new Dimension(200, 100)); // unify panel width
+		difficultyPanel.setMaximumSize(new Dimension(200, 100));
 
 
 		JPanel startingPlayerPanel = new JPanel();
@@ -65,12 +64,12 @@ public class MainGUI extends JFrame {
 
 		startingPlayerPanel.add(rbComputer);
 		startingPlayerPanel.add(rbHuman);
-		startingPlayerPanel.setMaximumSize(new Dimension(200, 100)); // unify panel width
+		startingPlayerPanel.setMaximumSize(new Dimension(200, 100));
 
 
 		buttonStart = new JButton("Start Game");
 		buttonStart.setAlignmentX(Component.CENTER_ALIGNMENT);
-		buttonStart.setPreferredSize(new Dimension(120, 35));
+		buttonStart.setPreferredSize(new Dimension(200, 100));
 
 
 		setupPanel.add(difficultyPanel);

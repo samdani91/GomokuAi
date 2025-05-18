@@ -20,7 +20,6 @@ public class Game {
 
 	public void start() {
 		if(aiStarts) playMove(board.getBoardSize()/2, board.getBoardSize()/2, false);
-
 		board.startListening(new MouseListener() {
 			public void mouseClicked(MouseEvent arg0) {
 				if(isPlayersTurn) {

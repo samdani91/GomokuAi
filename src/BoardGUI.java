@@ -8,6 +8,7 @@ import java.awt.Graphics2D;
 import java.awt.RenderingHints;
 import java.awt.event.MouseListener;
 import java.awt.image.BufferedImage;
+import java.io.Serial;
 
 import javax.swing.JPanel;
 
@@ -17,6 +18,7 @@ public class BoardGUI extends JPanel {
 	private final BufferedImage image;
 	private boolean isAIThinking = false;
 
+	@Serial
 	private static final long serialVersionUID = 1L;
 
 	private final int sideLength;
