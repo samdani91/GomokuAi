@@ -124,7 +124,7 @@ public class BoardGUI extends JPanel {
 		int x = (sideLength/2 - metrics.stringWidth(text)*2);
 		int y = sideLength/2;
 
-		g2D.setColor(new Color(32, 178, 170, 150));
+		g2D.setColor(new Color(255, 255, 0, 150));
 		g2D.drawString(text,x,y);
 	}
 

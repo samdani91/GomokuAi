@@ -15,7 +15,6 @@ public class MainGUI extends JFrame {
 	private final JRadioButton rbComputer;
 
 	public MainGUI(int width, int height, String title) {
-		// Set Nimbus Look and Feel
 		try {
 			for (UIManager.LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {
 				if ("Nimbus".equals(info.getName())) {
@@ -32,7 +31,7 @@ public class MainGUI extends JFrame {
 		setupPanel.setLayout(new BoxLayout(setupPanel, BoxLayout.Y_AXIS));
 		setupPanel.setBorder(new EmptyBorder(15, 20, 15, 20));
 
-		// Difficulty Panel
+
 		JPanel difficultyPanel = new JPanel();
 		difficultyPanel.setLayout(new BoxLayout(difficultyPanel, BoxLayout.Y_AXIS));
 		difficultyPanel.setBorder(BorderFactory.createTitledBorder("Select Difficulty"));
@@ -50,7 +49,7 @@ public class MainGUI extends JFrame {
 		difficultyPanel.add(rbHard);
 		difficultyPanel.setMaximumSize(new Dimension(200, 100)); // unify panel width
 
-		// Starting Player Panel
+
 		JPanel startingPlayerPanel = new JPanel();
 		startingPlayerPanel.setLayout(new BoxLayout(startingPlayerPanel, BoxLayout.Y_AXIS));
 		startingPlayerPanel.setBorder(BorderFactory.createTitledBorder("Who Starts First"));
@@ -68,12 +67,12 @@ public class MainGUI extends JFrame {
 		startingPlayerPanel.add(rbHuman);
 		startingPlayerPanel.setMaximumSize(new Dimension(200, 100)); // unify panel width
 
-		// Start Button (Centered)
+
 		buttonStart = new JButton("Start Game");
 		buttonStart.setAlignmentX(Component.CENTER_ALIGNMENT);
 		buttonStart.setPreferredSize(new Dimension(120, 35));
 
-		// Add everything
+
 		setupPanel.add(difficultyPanel);
 		setupPanel.add(Box.createRigidArea(new Dimension(0, 10)));
 		setupPanel.add(startingPlayerPanel);
@@ -82,7 +81,7 @@ public class MainGUI extends JFrame {
 
 		add(setupPanel);
 		pack();
-		setLocationRelativeTo(null); // center on screen
+		setLocationRelativeTo(null);
 		setResizable(false);
 	}
 
